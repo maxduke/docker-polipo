@@ -1,4 +1,5 @@
 #!/bin/sh
+set -e
 
 echo 'Start'
 
@@ -6,10 +7,11 @@ for file in /polipo/conf/*
 do
 	if test -f $file
 	then
-		set -x
+		echo $file
 		/usr/local/bin/polipo -c $file
-		set +x
 	fi
 done
 
-echo 'All done'
+exec echo 'All done'
+
+echo 'Existing'
