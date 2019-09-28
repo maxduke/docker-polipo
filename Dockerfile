@@ -13,7 +13,7 @@ RUN set -xe \
     && cd .. \
     && rm -rf polipo.zip polipo-master \
     && mkdir -p /polipo/conf /usr/share/polipo/www /var/cache/polipo \
-    && apk del build-base openssl
+    && apk del build-base openssl \
 	&& chmod +x /init.sh
 
 VOLUME ["/polipo/conf"]
