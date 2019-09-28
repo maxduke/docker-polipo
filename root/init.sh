@@ -12,6 +12,8 @@ do
 	fi
 done
 
-exec echo 'All done'
+echo 'All done'
+
+exec tail -f /dev/null
 
 echo 'Existing'
