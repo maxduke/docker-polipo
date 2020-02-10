@@ -3,6 +3,8 @@ set -e
 
 echo 'Start'
 
+rm /var/run/polipo*.pid
+
 for file in /polipo/conf/*
 do
 	if test -f $file
