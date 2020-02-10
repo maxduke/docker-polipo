@@ -1,9 +1,10 @@
 #!/bin/sh
-set -e
 
 echo 'Start'
 
 rm /var/run/polipo*.pid
+
+set -e
 
 for file in /polipo/conf/*
 do
